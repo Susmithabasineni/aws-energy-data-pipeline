@@ -1,4 +1,4 @@
-data "archive_file" "lambda_zip" {
+edata "archive_file" "lambda_zip" {
   type        = "zip"
   source_dir  = "${path.module}/../data_generator"
   output_path = "${path.module}/../data_generator.zip"
@@ -26,7 +26,7 @@ environment {
 resource "aws_lambda_permission" "allow_s3" {
   statement_id  = "AllowExecutionFromS3"
   action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.processor.function_name
+  function_name = aws_lambda_function.processor.generate_data
   principal     = "s3.amazonaws.com"
   source_arn    = aws_s3_bucket.energy_data.arn
 }
