@@ -1,4 +1,4 @@
-edata "archive_file" "lambda_zip" {
+data "archive_file" "lambda_zip" {
   type        = "zip"
   source_dir  = "${path.module}/../data_generator"
   output_path = "${path.module}/../data_generator.zip"
