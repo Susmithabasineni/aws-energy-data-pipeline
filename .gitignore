@@ -1,0 +1,33 @@
+# .gitignore
+# Python Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs and debug
+*.log
+
+# AWS
+.aws/
+*.tfstate*
+.terraform/
+
+# Environment
+.env
+.venv/
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Build Artifacts
+*.zip
+build/
+dist/
+*.egg-info/
+
+# System
+.DS_Store
+
+# GitHub workflows (logs)
+.github/workflows/*.log
